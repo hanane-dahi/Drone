@@ -1,4 +1,4 @@
-// https://www.instructables.com/Interfacing-Brushless-DC-Motor-BLDC-With-Arduino/
+
 
 #include <Servo.h>
 
