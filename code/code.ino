@@ -25,7 +25,7 @@ void setup()
   pinMode(PWM_VRA, INPUT);
   Serial.begin(115200);
 
-
+ 
   motor1.attach(11); 
   motor2.attach(10);
   motor3.attach(9);
@@ -46,12 +46,13 @@ void setup()
 void loop()
 {
 
-  int roll = pulseIn(PWM_ROLL, HIGH); //Read PWM Pulse
-  int pitch = pulseIn(PWM_PITCH, HIGH); //Read PWM Pulse
-  int throttle = pulseIn(PWM_THROTTLE, HIGH); //Read PWM Pulse
-  int yaw = pulseIn(PWM_YAW, HIGH); //Read PWM Pulse
-  int swA = pulseIn(PWM_SWA, HIGH); //Read PWM Pulse
-  int vrA = pulseIn(PWM_VRA, HIGH); //Read PWM Pulse
+  // Reciever
+  int roll = pulseIn(PWM_ROLL, HIGH); 
+  int pitch = pulseIn(PWM_PITCH, HIGH); 
+  int throttle = pulseIn(PWM_THROTTLE, HIGH);
+  int yaw = pulseIn(PWM_YAW, HIGH); 
+  int swA = pulseIn(PWM_SWA, HIGH); 
+  int vrA = pulseIn(PWM_VRA, HIGH); 
   
   Serial.print(" PWM CH1 Roll: ");
   Serial.print(roll-1500);
@@ -68,7 +69,7 @@ void loop()
 
 
   
-  //Vary this between 40-130 to change the speed of motor. Higher value, higher speed.
+  // Brushless 
   motor1.write(55);
   motor2.write(55);
   motor3.write(55);

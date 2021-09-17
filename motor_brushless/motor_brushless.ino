@@ -1,5 +1,3 @@
-// https://www.instructables.com/Interfacing-Brushless-DC-Motor-BLDC-With-Arduino/
-
 #include <Servo.h>
 
 
@@ -30,7 +28,6 @@ void setup()
 
 void loop()
 {
-  //Vary this between 40-130 to change the speed of motor. Higher value, higher speed.
   motor1.write(55);
   motor2.write(55);
   motor3.write(55);

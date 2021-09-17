@@ -1,10 +1,9 @@
-// link : https://www.instructables.com/Getting-Value-From-FlySky-With-Ar duino-to-Control/
-int PWM_ROLL = 13; //Define Digital PIN
-int PWM_PITCH = 12; //Define Digital PIN
-int PWM_THROTTLE = 7; //Define Digital PIN
-int PWM_YAW = 5; //Define Digital PIN
-int PWM_SWA = 3; //Define Digital PIN
-int PWM_VRA = 8; //Define Digital PIN
+int PWM_ROLL = 13; 
+int PWM_PITCH = 12; 
+int PWM_THROTTLE = 7;
+int PWM_YAW = 5; 
+int PWM_SWA = 3; 
+int PWM_VRA = 8;
 
 void setup() {
   pinMode(PWM_ROLL, INPUT);
@@ -17,12 +16,12 @@ void setup() {
 }
 
 void loop() {
-  int roll = pulseIn(PWM_ROLL, HIGH); //Read PWM Pulse
-  int pitch = pulseIn(PWM_PITCH, HIGH); //Read PWM Pulse
-  int throttle = pulseIn(PWM_THROTTLE, HIGH); //Read PWM Pulse
-  int yaw = pulseIn(PWM_YAW, HIGH); //Read PWM Pulse
-  int swA = pulseIn(PWM_SWA, HIGH); //Read PWM Pulse
-  int vrA = pulseIn(PWM_VRA, HIGH); //Read PWM Pulse
+  int roll = pulseIn(PWM_ROLL, HIGH); 
+  int pitch = pulseIn(PWM_PITCH, HIGH); 
+  int throttle = pulseIn(PWM_THROTTLE, HIGH);
+  int yaw = pulseIn(PWM_YAW, HIGH); 
+  int swA = pulseIn(PWM_SWA, HIGH);
+  int vrA = pulseIn(PWM_VRA, HIGH); 
   
   Serial.print(" PWM CH1 Roll: ");
   Serial.print(roll-1500);
